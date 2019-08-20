@@ -28,10 +28,14 @@ function printEsp() {
         num1++;
     }
 }
+function engSearch() {
+    var searching = prompt("Enter English word");
+    alert(`The Spanish word for ${searching} is ${spanish[english.indexOf(searching)]}!`);
+}
 
 function main1() {
     while (0 === 0) {
-        userInput = prompt("Press 1 to list all English to Spanish translations\nPress 2 to list all Spanish to English translations\nPress 3 to enter a new English translation\nPress 4 to enter a new Spanish translation\nPress 5 or 'q' to quit ");
+        userInput = prompt("Press 1 to list all English to Spanish translations\nPress 2 to list all Spanish to English translations\nPress 3 to enter a new English translation\nPress 4 to enter a new Spanish translation\nPress 5 or 'q' to quit\nPress 6 to get the Spanish translation for an English word.");
         if (userInput === "1") {
             printEng();
         }
@@ -48,6 +52,9 @@ function main1() {
         }
         else if (userInput.toUpperCase() === "Q" || userInput === "5") {
             break;
+        }
+        else if (userInput === "6"){
+            engSearch();
         }
         else {
             alert("INVALID ANSWER");
