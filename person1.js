@@ -18,8 +18,6 @@ spanishArray = ['Hola'];
 
 let menu;
 function main() {
-
-
     while (menu !== 'q' && menu !== "5") {
         menu = prompt("Press 1 to list all English to Spanish translations \n" +
             "press 2 to list all Spanish to English translations, \n" +
@@ -28,18 +26,10 @@ function main() {
             "and press 5 or 'q' to quit.\n" +
             "Press 6 to search for an English word and give the Spanish translation.");
         if (menu === "1") {
-            var num = 0;
-            while (num < englishArray.length) {
-                console.log((`English:${englishArray[num]}\nEspañol:${spanishArray[num]}`));
-                num++;
-            }
+            printEng();
         }
         else if (menu === '2') {
-            var num1 = 0;
-            while (num1 < spanishArray.length) {
-                console.log(`Español:${spanishArray[num1]}\nEnglish:${englishArray[num1]}`);
-                num1++;
-            }
+            printEsp();
         }
         else if (menu === '3') {
             addInEnglishArray();
@@ -52,13 +42,6 @@ function main() {
             engSearch();
         }
     }
-
-
-
-
-
-
-
 }
  main();
 function addInEnglishArray () {
@@ -69,7 +52,20 @@ function addInEnglishArray () {
 function addInSpanishArray() {
     var addSpanish = prompt("Enter the spanish word");
     spanishArray.push(addSpanish);
-
+}
+function printEng() {
+    var num = 0;
+    while (num < englishArray.length) {
+        console.log(`English:${englishArray[num]}\nEspañol:${spanishArray[num]}`);
+        num++;
+    }
+}
+function printEsp() {
+    var num1 = 0;
+    while (num1 < spanishArray.length) {
+        console.log(`Español:${spanishArray[num1]}\nEnglish:${englishArray[num1]}`);
+        num1++;
+    }
 }
 
 function engSearch() {
