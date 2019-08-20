@@ -54,13 +54,7 @@ function main() {
 
 
 }
-
 main();
-
-
-
-
-
 function addInEnglishArray () {
     var add = prompt("Enter the English word");
     englishArray.push(add);
