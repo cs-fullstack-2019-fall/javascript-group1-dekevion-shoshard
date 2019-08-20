@@ -21,6 +21,7 @@ function printEng() {
         num++;
     }
 }
+
 function printEsp() {
     var num1 = 0;
     while (num1 < spanish.length) {
