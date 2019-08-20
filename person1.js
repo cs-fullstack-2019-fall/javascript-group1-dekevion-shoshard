@@ -32,16 +32,19 @@ function main() {
                 console.log(englishArray[num] + " " + spanishArray[num]);
                 num++;
             }
-        } else if (menu === '2') {
+        }
+        else if (menu === '2') {
             var num1 = 0;
             while (num1 < spanishArray.length) {
                 console.log(spanishArray[num1] + " " + englishArray[num1]);
                 num1++;
             }
-        } else if (menu === '3') {
+        }
+        else if (menu === '3') {
             addInEnglishArray();
             addInSpanishArray();
-        }  else if (menu === '4') {
+        }
+        else if (menu === '4') {
             addInSpanishArray();
             addInEnglishArray();
         }
