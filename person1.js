@@ -2,6 +2,18 @@ englishArray = ['Hello'];
 
 spanishArray = ['Hola'];
 
+// function addInEnglishArray () {
+//  var add = prompt("Enter the English word");
+//  englishArray.push(add);
+// addInSpanishArray();
+// }
+//
+// function addInSpanishArray() {
+//     var addSpanish = prompt("Enter the spanish word");
+//     spanishArray.push(addSpanish);
+//     addInEnglishArray();
+// }
+
 
 
 let menu;
@@ -20,15 +32,42 @@ function main() {
                 console.log(englishArray[num] + " " + spanishArray[num]);
                 num++;
             }
+        } else if (menu === '2') {
+            var num1 = 0;
+            while (num1 < spanishArray.length) {
+                console.log(spanishArray[num1] + " " + englishArray[num1]);
+                num1++;
+            }
+        } else if (menu === '3') {
+            addInEnglishArray();
+            addInSpanishArray();
+        }  else if (menu === '4') {
+            addInSpanishArray();
+            addInEnglishArray();
         }
-
-
-
-
-
-
     }
+
+
+
+
+
+
 
 }
 
 main();
+
+
+
+
+
+function addInEnglishArray () {
+    var add = prompt("Enter the English word");
+    englishArray.push(add);
+}
+
+function addInSpanishArray() {
+    var addSpanish = prompt("Enter the spanish word");
+    spanishArray.push(addSpanish);
+
+}
