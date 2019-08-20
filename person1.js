@@ -25,7 +25,8 @@ function main() {
             "press 2 to list all Spanish to English translations, \n" +
             "press 3 to enter a new English translation,\n" +
             "press 4 to enter a new Spanish translation,\n" +
-            "and press 5 or 'q' to quit.");
+            "and press 5 or 'q' to quit.\n" +
+            "Press 6 to search for an English word and give the Spanish translation.");
         if (menu === "1") {
             var num = 0;
             while (num < englishArray.length) {
@@ -47,6 +48,8 @@ function main() {
         else if (menu === '4') {
             addInSpanishArray();
             addInEnglishArray();
+        } else if (menu === '6') {
+            engSearch();
         }
     }
 
@@ -69,3 +72,7 @@ function addInSpanishArray() {
 
 }
 
+function engSearch() {
+    var searching = prompt("Enter English word");
+    alert(`The Spanish word for ${searching} is ${spanish[english.indexOf(searching)]}!`);
+}
