@@ -29,13 +29,13 @@ function main() {
         if (menu === "1") {
             var num = 0;
             while (num < englishArray.length) {
-                console.log(englishArray[num] + " " + spanishArray[num]);
+                console.log((`English:${englishArray[num]}\nEspañol:${spanishArray[num]}`));
                 num++;
             }
         } else if (menu === '2') {
             var num1 = 0;
             while (num1 < spanishArray.length) {
-                console.log(spanishArray[num1] + " " + englishArray[num1]);
+                console.log(`Español:${spanishArray[num1]}\nEnglish:${englishArray[num1]}`);
                 num1++;
             }
         } else if (menu === '3') {
@@ -54,7 +54,7 @@ function main() {
 
 
 }
-main();
+ main();
 function addInEnglishArray () {
     var add = prompt("Enter the English word");
     englishArray.push(add);
@@ -65,3 +65,4 @@ function addInSpanishArray() {
     spanishArray.push(addSpanish);
 
 }
+
